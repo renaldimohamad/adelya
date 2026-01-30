@@ -176,36 +176,36 @@ const animationTimeline = () => {
         0.2,
         "+=1.5"
     )
-    /* =========================
-   MOMENT OF PAUSE (BEFORE BALLOONS)
-========================= */
-    .to(".pause", 0.6, {
-    visibility: "visible",
-    opacity: 1,
-    ease: Power2.easeOut,
-    })
-    .fromTo(
-    ".pause-text",
-    0.8,
-    { opacity: 0, y: 12 },
-    { opacity: 1, y: 0, ease: Power2.easeOut }
-    )
-    .to(
-    ".pause-text",
-    0.6,
-    { opacity: 0, y: -10, ease: Power2.easeIn },
-    "+=1.2" // ⏸ jeda napas
-    )
-    .to(
-    ".pause",
-    0.5,
-    {
-        opacity: 0,
-        visibility: "hidden",
-        ease: Power2.easeIn,
-    },
-    "-=0.3"
-    )
+//     /* =========================
+//    MOMENT OF PAUSE (BEFORE BALLOONS)
+// ========================= */
+//     .to(".pause", 0.6, {
+//     visibility: "visible",
+//     opacity: 1,
+//     ease: Power2.easeOut,
+//     })
+//     .fromTo(
+//     ".pause-text",
+//     0.8,
+//     { opacity: 0, y: 12 },
+//     { opacity: 1, y: 0, ease: Power2.easeOut }
+//     )
+//     .to(
+//     ".pause-text",
+//     0.6,
+//     { opacity: 0, y: -10, ease: Power2.easeIn },
+//     "+=1.2" // ⏸ jeda napas
+//     )
+//     .to(
+//     ".pause",
+//     0.5,
+//     {
+//         opacity: 0,
+//         visibility: "hidden",
+//         ease: Power2.easeIn,
+//     },
+//     "-=0.3"
+//     )
     .staggerFromTo(
         ".baloons img",
         2.5, {
