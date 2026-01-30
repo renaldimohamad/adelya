@@ -8,6 +8,8 @@
   --border-color: #d1d5db;
   --box-bg: #ffffff;
   --accent: #6366f1;
+  --pause-bg: rgba(255, 255, 255, 0.55);
+  --pause-text: #1f2937;
 }
 
 [data-theme="dark"] {
@@ -17,6 +19,8 @@
   --border-color: #334155;
   --box-bg: #1e293b;
   --accent: #818cf8;
+  --pause-bg: rgba(15, 23, 42, 0.65);
+  --pause-text: #e5e7eb;
 }
 
 /* =========================
@@ -469,4 +473,40 @@ body {
   height: min(90vh, 420px); /* 🔥 ini kuncinya */
   max-height: 420px;
   object-fit: cover;
+}
+
+/* =========================
+   MOMENT OF PAUSE
+========================= */
+
+/* =========================
+   MOMENT OF PAUSE (FINAL)
+========================= */
+
+.pause {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: var(--pause-bg);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.pause-text {
+  font-family: inherit;
+  font-size: clamp(1rem, 2.4vw, 1.5rem);
+  font-weight: 300;
+  line-height: 1.7;
+  text-align: center;
+  letter-spacing: 0.5px;
+  color: var(--pause-text);
+  max-width: 80%;
 }
